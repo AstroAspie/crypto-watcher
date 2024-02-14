@@ -4,7 +4,7 @@ const { data } = await useFetch('/api/tickers?limit=10')
 
 <template>
   <main>
-    <h1>Index Page</h1>
+    <h1 class="title">Astr0's Crypto Watcher</h1>
 
     <table border="1px solid">
       <thead>
@@ -26,3 +26,43 @@ const { data } = await useFetch('/api/tickers?limit=10')
     </table>
   </main>
 </template>
+
+<style scoped>
+  body {
+    background-color: #363636;
+  }
+  table {
+    width: 100%;
+  }
+  
+  th {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  td {
+    padding: 10px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+    color: cornsilk;
+  }
+  
+  tr:nth-child(odd) {
+    background-color: #f2f2f2;
+    color: #8d8d8d
+  }
+  
+  a {
+    color: #000;
+  }
+  
+  a:hover {
+    color: #fff;
+  }
+  
+  .title {
+    color: #35abbb;
+  }
+</style>

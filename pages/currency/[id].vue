@@ -7,7 +7,7 @@ const coin = data.value[0]
 <template>
   <div>
     <h2>{{  coin.name }} Default Page</h2>
-    <table border="1 px solid">
+    <table class="crypto-table">
       <thead>
         <th>Symbol</th>
         <th>Rank</th>
@@ -23,3 +23,31 @@ const coin = data.value[0]
     </table>
   </div>
 </template>
+
+
+<style scoped>
+  body {
+    background-color: #363636;
+  }
+  
+  table {
+    width: 100%;
+  }
+
+  .crypto-table {
+    border: 1px solid #000;
+  }
+  
+  th {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  td {
+    padding: 10px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+</style>
