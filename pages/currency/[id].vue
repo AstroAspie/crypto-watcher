@@ -5,14 +5,16 @@ const coin = data.value[0]
 </script>
 
 <template>
-  <div>
+  <div class="container">
     <h2>{{  coin.name }} Default Page</h2>
     <table class="crypto-table">
       <thead>
-        <th>Symbol</th>
-        <th>Rank</th>
-        <th>Price - US $</th>
-        <th>Market Cap - US $</th>
+        <tr>
+          <th>Symbol</th>
+          <th>Rank</th>
+          <th>Price</th>
+          <th>Market Cap</th>
+        </tr>
       </thead>
       <tr>
         <td>{{ coin.symbol }}</td>
@@ -30,11 +32,8 @@ const coin = data.value[0]
     background-color: #363636;
   }
   
-  table {
-    width: 100%;
-  }
-
   .crypto-table {
+    width: 80%;
     border: 1px solid #000;
   }
   
