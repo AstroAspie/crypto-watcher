@@ -15,7 +15,7 @@ const { data } = await useFetch('/api/tickers?limit=10')
           <th>Details</th>
         </tr>
         </thead>
-        <tr v-for="currency in data.data" :key="data.data.id" class="table-item">
+        <tr v-for="currency in data.data" :key="currency.id" class="table-item">
           <td>{{ currency.name }}</td>
           <td>{{ currency.symbol }}</td>
           <td>{{ currency.price_usd }}</td>
@@ -61,20 +61,22 @@ const { data } = await useFetch('/api/tickers?limit=10')
     padding: 10px;
   }
   
-  .table-item {
-    background-color: #f2f2f2;
-  }
-  
   .table-item:nth-child(even) {
     color: #35abbb;
   }
   
   .table-item:nth-child(odd) {
-    color: #3578bb
+    color: #fff;
+  }
+  
+  .table-item:nth-child(even) {
+    td {
+      background-color: black;
+    }
   }
   
   a {
-    color: #000;
+    color: lightblue;
   }
   
   a:hover {
