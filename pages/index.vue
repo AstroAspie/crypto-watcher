@@ -70,9 +70,7 @@ const { data } = await useFetch('/api/tickers?limit=10')
   }
   
   .table-item:nth-child(even) {
-    td {
-      background-color: black;
-    }
+    background-color: black;
   }
   
   a {
